@@ -1,0 +1,121 @@
+MyWindow
+{
+	WindowSizeX 1000
+	WindowSizeY 1000
+	DepthBits 24
+	Title SeasonalGlobe
+}
+
+Seasons
+{
+	TimeBetween 30
+	StartSeason Spring
+}
+
+Camera
+{
+	Position (0,0,-2.0)
+	Rotation (0,0,0)
+}
+
+Sun
+{
+	Position (0,0,0)
+	Direction (-1,0,0.5)
+	Colour (1,1,1,1)
+}
+
+Base
+{
+	Position (0,0,0)
+	Scale (1,1,1)
+	Rotation (0,0,0)
+	OBJFile Resources/Objects/base.obj
+	TextureFile Resources/Textures/wood.bmp
+	
+	Ambience (0.5,0.5,0.5,1.0) 
+	Diffuse (1.0,1.0,1.0,1.0) 
+	Specular (0.5,0.5,0.5,0.5) 
+	Shine 50
+}
+
+Terrain
+{
+	Position (0,0,0)
+	Scale (1,1,1)
+	Rotation (0,0,0)
+	OBJFile Resources/Objects/terrain.obj
+	TextureFile Resources/Textures/grass.bmp
+	
+	Ambience (0.5,0.5,0.5,1.0) 
+	Diffuse (0.8,0.8,0.8,1.0) 
+	Specular (0.0,0.0,0.0,0.0) 
+	Shine 200
+}
+
+House
+{
+	Position (0,0,0.5)
+	Scale (1,1,1)
+	Rotation (0,180,0)
+	OBJFile Resources/Objects/house.obj
+	TextureFile Resources/Textures/house.bmp
+	
+	Ambience (0.5,0.5,0.5,1.0) 
+	Diffuse (1.0,1.0,1.0,1.0) 
+	Specular (0.0,0.0,0.0,0.0) 
+	Shine 50
+}
+
+Lake
+{
+	Position (0,-0.05,0)
+	Scale (0.8,1,0.8)
+	Rotation (0,0,0)
+	OBJFile Resources/Objects/lake.obj
+	
+	Ambience (0.3,0.3,0.5,0.5)
+	Diffuse (0.3,0.3,0.6,0.5)
+	Specular (1.0,1.0,1.0,0.3) 
+	Shine 50
+}
+
+Globe
+{
+	Position (0,0,0)
+	Scale (1,1,1)
+	Rotation (0,0,0)
+	OBJFile Resources/Objects/dome.obj
+	
+	Ambience (1,1,1,0.1)
+	Diffuse (1,1,1,0.1)
+	Specular (1,1,1,1)
+	Shine 15
+}
+
+ParticleManager
+{
+	NumSystems 3
+	0 Snow
+	1 Fire
+	2 Smoke
+
+	Forces (-1,-0.98,0)
+}
+
+Tree
+{
+	Position (-0.3,0,-0.3)
+	Scale (1,1,1)
+	Rotation (0,0,0)
+	OBJFile Resources/Objects/branch.obj
+	TextureFile Resources/Textures/bark.bmp
+
+	Ambience (0.5,0.5,0.5,1)
+	Diffuse (0.8,0.8,0.8,1)
+	Specular (1,1,1,0)
+	Shine 15
+
+	Iterations 8
+	StartMode Textured
+}

@@ -1,0 +1,50 @@
+System
+{
+	StartTime 0.0
+	EndTime 100.0
+
+	NumFireEmitters 1
+	NumSmokeEmitters 1
+}
+
+EF1
+{
+	NumOfParticles 500
+	MinPos (0,0,0)
+	MaxPos (0,0,0)
+	MinVel (-0.01,0.05,-0.01)
+	MaxVel (0.01,0.1,0.001)
+	MinTTL 0.5
+	MaxTTL 1.5
+
+	ForceScale (0,0,0)
+	ReleaseTime 0.01
+
+	Position (0,0,0)
+
+	Texture Resources/Textures/smoke.tga
+
+	Scale 50
+}
+
+ESM1
+{
+	NumOfParticles 500
+	MinPos (0,0,0)
+	MaxPos (0,0,0)
+	MinVel (-0.01,0.01,-0.01)
+	MaxVel (0.01,0.1,0.01)
+
+	MinTTL 1
+	MaxTTL 5
+
+	ForceScale (0,0,0)
+	
+	ReleaseTime 0.005
+
+	Position (0,0,0)
+
+	Texture Resources/Textures/smoke.tga
+
+	Scale 50
+}

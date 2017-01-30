@@ -1,0 +1,44 @@
+System
+{
+	StartTime 0.0
+	EndTime 100.0
+
+	NumSnowEmitters 2
+	
+}
+
+ES1
+{
+	NumOfParticles 1000
+	MinPos (-1,0.0,-1)
+	MaxPos (1,0.0,1)
+	MinVel (0.0,0.0,0.0)
+	MaxVel (0.0,0.0,0.0)
+
+	ForceScale (0.05,0.5,0)
+	ReleaseTime 0.01
+
+	Texture Resources/Textures/particle.tga
+
+	Position (0,1,0)
+
+	Scale 10
+}
+
+ES2
+{
+	NumOfParticles 1000
+	MinPos (-1,0.0,-1)
+	MaxPos (1,0.0,1)
+	MinVel (0.0,0,0.0)
+	MaxVel (0.0,0,0.0)
+
+	ForceScale (-0.05,0.5,0)
+	ReleaseTime 0.01
+
+	Texture Resources/Textures/particle.tga
+
+	Position (0,1,0)
+
+	Scale 5
+}

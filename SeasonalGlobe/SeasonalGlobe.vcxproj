@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{313668D7-1163-4DC3-B43D-9AAB57A46412}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SeasonalGlobe</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.\GXBase\include;$(IncludePath)</IncludePath>
+    <LibraryPath>.\GXBase\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>.\GXBase\include;$(IncludePath)</IncludePath>
+    <LibraryPath>.\GXBase\lib\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Branches.cpp" />
+    <ClCompile Include="Globe.cpp" />
+    <ClCompile Include="Grass.cpp" />
+    <ClCompile Include="House.cpp" />
+    <ClCompile Include="Lake.cpp" />
+    <ClCompile Include="Leaf.cpp" />
+    <ClCompile Include="Lightening.cpp" />
+    <ClCompile Include="Lights.cpp" />
+    <ClCompile Include="Maths\Vector2f.cpp" />
+    <ClCompile Include="Maths\Vector3f.cpp" />
+    <ClCompile Include="Maths\Vector4f.cpp" />
+    <ClCompile Include="OBJLoader.cpp" />
+    <ClCompile Include="ParticleEmitter.cpp" />
+    <ClCompile Include="ParticleManager.cpp" />
+    <ClCompile Include="ParticleSystem.cpp" />
+    <ClCompile Include="SGApp.cpp" />
+    <ClCompile Include="SGWindow.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="ShaderProgram.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="TreeState.cpp" />
+    <ClCompile Include="Utility.cpp" />
+    <ClCompile Include="VBO.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="Branches.h" />
+    <ClInclude Include="Globe.h" />
+    <ClInclude Include="Grass.h" />
+    <ClInclude Include="House.h" />
+    <ClInclude Include="ITexturedShape.h" />
+    <ClInclude Include="Lake.h" />
+    <ClInclude Include="Leaf.h" />
+    <ClInclude Include="Lightening.h" />
+    <ClInclude Include="Lights.h" />
+    <ClInclude Include="Maths\Vector2f.h" />
+    <ClInclude Include="Maths\Vector3f.h" />
+    <ClInclude Include="Maths\Vector4f.h" />
+    <ClInclude Include="OBJLoader.h" />
+    <ClInclude Include="ParticleEmitter.h" />
+    <ClInclude Include="ParticleManager.h" />
+    <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="SGWindow.h" />
+    <ClInclude Include="IShape.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="Terrain.h" />
+    <ClInclude Include="TreeState.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="VBO.h" />
+    <ClInclude Include="World.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\Config\Config.txt" />
+    <None Include="Resources\Config\FireConfig.txt" />
+    <None Include="Resources\Config\SmokeConfig.txt" />
+    <None Include="Resources\Config\SnowConfig.txt" />
+    <None Include="Resources\Shaders\Base.frag" />
+    <None Include="Resources\Shaders\Base.vert" />
+    <None Include="Resources\Shaders\Fire.frag" />
+    <None Include="Resources\Shaders\Fire.vert" />
+    <None Include="Resources\Shaders\Globe.frag" />
+    <None Include="Resources\Shaders\Globe.vert" />
+    <None Include="Resources\Shaders\Grass.frag" />
+    <None Include="Resources\Shaders\Grass.vert" />
+    <None Include="Resources\Shaders\House.frag" />
+    <None Include="Resources\Shaders\House.vert" />
+    <None Include="Resources\Shaders\Lake.frag" />
+    <None Include="Resources\Shaders\Lake.vert" />
+    <None Include="Resources\Shaders\Leaf.frag" />
+    <None Include="Resources\Shaders\Leaf.vert" />
+    <None Include="Resources\Shaders\Lightening.frag" />
+    <None Include="Resources\Shaders\Lightening.vert" />
+    <None Include="Resources\Shaders\Smoke.frag" />
+    <None Include="Resources\Shaders\Smoke.vert" />
+    <None Include="Resources\Shaders\Snow.frag" />
+    <None Include="Resources\Shaders\Snow.vert" />
+    <None Include="Resources\Shaders\Terrain.frag" />
+    <None Include="Resources\Shaders\Terrain.vert" />
+    <None Include="Resources\Shaders\TreeNone.frag" />
+    <None Include="Resources\Shaders\TreeNone.vert" />
+    <None Include="Resources\Shaders\TreeNonSmooth.frag" />
+    <None Include="Resources\Shaders\TreeNonSmooth.vert" />
+    <None Include="Resources\Shaders\TreeSmooth.frag" />
+    <None Include="Resources\Shaders\TreeSmooth.vert" />
+    <None Include="Resources\Shaders\TreeTextured.frag" />
+    <None Include="Resources\Shaders\TreeTextured.vert" />
+    <None Include="Resources\Textures\bark.bmp" />
+    <None Include="Resources\Textures\fire.tga" />
+    <None Include="Resources\Textures\grass.bmp" />
+    <None Include="Resources\Textures\grassBlade.tga" />
+    <None Include="Resources\Textures\house.bmp" />
+    <None Include="Resources\Textures\leaf.tga" />
+    <None Include="Resources\Textures\particle.tga" />
+    <None Include="Resources\Textures\smoke.tga" />
+    <None Include="Resources\Textures\wood.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
